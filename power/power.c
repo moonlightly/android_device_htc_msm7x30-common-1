@@ -29,6 +29,7 @@
 #define SCALING_GOVERNOR_PATH "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
 #define BOOSTPULSE_ONDEMAND "/sys/devices/system/cpu/cpufreq/ondemand/boostpulse"
 #define BOOSTPULSE_INTERACTIVE "/sys/devices/system/cpu/cpufreq/interactive/boostpulse"
+#define SAMPLING_RATE_ONDEMAND "/sys/devices/system/cpu/cpufreq/ondemand/sampling_rate"
 #define SAMPLING_RATE_SCREEN_ON "50000"
 #define SAMPLING_RATE_SCREEN_OFF "500000"
 #define TIMER_RATE_SCREEN_ON "30000"
@@ -52,14 +53,14 @@ static int sysfs_read(char *path, char *s, int num_bytes)
 
     if (fd < 0) {
         strerror_r(errno, buf, sizeof(buf));
-        ALOGE("Error opening %s: %s\n", path, buf);
+        ALOGV("Error opening %s: %s\n", path, buf);
 
         return -1;
     }
 
     if ((count = read(fd, s, num_bytes - 1)) < 0) {
         strerror_r(errno, buf, sizeof(buf));
-        ALOGE("Error writing to %s: %s\n", path, buf);
+        ALOGV("Error writing to %s: %s\n", path, buf);
 
         ret = -1;
     } else {
@@ -79,14 +80,14 @@ static void sysfs_write(char *path, char *s)
 
     if (fd < 0) {
         strerror_r(errno, buf, sizeof(buf));
-        ALOGE("Error opening %s: %s\n", path, buf);
+        ALOGV("Error opening %s: %s\n", path, buf);
         return;
     }
 
     len = write(fd, s, strlen(s));
     if (len < 0) {
         strerror_r(errno, buf, sizeof(buf));
-        ALOGE("Error writing to %s: %s\n", path, buf);
+        ALOGV("Error writing to %s: %s\n", path, buf);
     }
 
     close(fd);
