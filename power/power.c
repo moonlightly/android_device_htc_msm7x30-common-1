@@ -237,3 +237,4 @@ struct cm_power_module HAL_MODULE_INFO_SYM = {
     boostpulse_fd: -1,
     boostpulse_warned: 0,
 };
+
