@@ -85,8 +85,6 @@ BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 # BT
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/msm7x30-common/bluetooth/vnd_msm7x30.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/htc/msm7x30-common/bluetooth/include
 
 # GPS
 TARGET_PROVIDES_GPS_LOC_API := true
