@@ -52,9 +52,7 @@ PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
 
 PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/audio_policy.conf:system/etc/audio_policy.conf\
-    device/htc/msm7x30-common/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
-
+    device/htc/msm7x30-common/audio_policy.conf:system/etc/audio_policy.conf
 
 # Audio
 PRODUCT_PACKAGES += \
