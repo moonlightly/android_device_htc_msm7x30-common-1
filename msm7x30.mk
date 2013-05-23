@@ -30,7 +30,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml 
 
 
 PRODUCT_COPY_FILES += \
@@ -53,7 +54,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/media_profiles.xml:system/etc/media_profiles.xml \
     device/htc/msm7x30-common/media_codecs.xml:system/etc/media_codecs.xml \
-    device/htc/msm7x30-common/audio_policy.conf:system/etc/audio_policy.conf
+    device/htc/msm7x30-common/audio_policy.conf:system/etc/audio_policy.conf\
+    device/htc/msm7x30-common/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -96,10 +99,10 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
-# we have enough storage space to hold precise GC data
+# We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# use high-density artwork where available
+# Use high-density artwork where available
 PRODUCT_LOCALES += en
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
