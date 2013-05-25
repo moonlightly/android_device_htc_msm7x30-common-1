@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/configs/init.htc7x30.usb.rc:root/init.htc7x30.usb.rc
+    device/htc/msm7x30-common/init.htc7x30.usb.rc:root/init.htc7x30.usb.rc
 
 # Common 7x30 firmware
 PRODUCT_COPY_FILES += \
