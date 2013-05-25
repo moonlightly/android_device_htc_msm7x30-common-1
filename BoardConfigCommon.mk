@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Common stuff
-TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
-
 # Platform
 TARGET_BOARD_PLATFORM := msm7x30
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
@@ -61,7 +58,7 @@ TARGET_GRALLOC_USES_ASHMEM := true
 TARGET_USES_GENLOCK := true
 TARGET_NO_HW_VSYNC := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
-BOARD_EGL_CFG := device/htc/msm7x30-common/egl.cfg
+BOARD_EGL_CFG := device/htc/msm7x30-common/configs/egl.cfg
 
 # Camera
 CAMERA_USES_SURFACEFLINGER_CLIENT_STUB := true
