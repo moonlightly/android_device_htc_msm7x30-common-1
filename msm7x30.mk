@@ -75,6 +75,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc
 
+# Wireless
+PRODUCT_PACKAGES += \
+    libnetcmdiface
+
 # Power HAL
 PRODUCT_PACKAGES += \
     power.msm7x30
