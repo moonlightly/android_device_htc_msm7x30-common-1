@@ -23,12 +23,19 @@
 
     <!-- Haptic Preference -->
     <string name="category_haptic_title">Haptic</string>
+    <string name="category_trackpad_title">Trackpad</string>
 
     <!-- VibratorTuning -->
     <string name="vibrator_title">Vibrator</string>
     <string name="vibrator_tuning_title">Vibration strength</string>
     <string name="vibrator_tuning_summary_head">Adjust the strength of the vibration feedback</string>
     <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
+
+    <!-- TrackballWake -->
+    <string name="pref_trackball_wake_toggle_title">Trackball wake</string>
+    <string name="pref_trackball_wake_toggle_summary">Allow trackball to wake the device</string>
+    <string name="pref_trackball_unlock_toggle_title">Trackball unlock</string>
+    <string name="pref_trackball_unlock_toggle_summary">Allow trackball to unlock the device</string>
 
     <!-- Touchscreen Preference -->
     <string name="category_touchscreen_title">Touchscreen</string>
