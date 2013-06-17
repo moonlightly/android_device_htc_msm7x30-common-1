@@ -30,7 +30,4 @@
     <!-- sweep2wake -->
     <bool name="has_sweep2wake">true</bool>
 
-    <!-- trackball -->
-    <bool name="has_trackball">true</bool>
-
 </resources>
