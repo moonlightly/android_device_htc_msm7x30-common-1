@@ -23,6 +23,8 @@
 
     <!-- Haptic Preference -->
     <string name="category_haptic_title">Haptic</string>
+    <string name="category_touchscreen_title">Touchscreen</string>
+    <string name="category_trackpad_title">Trackpad</string>
 
     <!-- VibratorTuning -->
     <string name="vibrator_title">Vibrator</string>
@@ -31,10 +33,14 @@
     <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
 
     <!-- Touchscreen Preference -->
-    <string name="category_touchscreen_title">Touchscreen</string>
     <string name="pref_sweep_to_wake_category_title">Sweep to wake</string>
     <string name="pref_sweep_to_wake_title">Enable</string>
     <string name="pref_sweep_to_wake_summary">Enables sweep2wake, a method to turn the screen on by swiping from left to right on capacitive buttons and right to left to sleep</string>
 
+    <!-- tpwake -->
+    <string name="pref_trackball_wake_toggle_title">Trackball wake</string>
+    <string name="pref_trackball_wake_toggle_summary">Allow trackball to wake the device</string>
+    <string name="pref_trackball_unlock_toggle_title">Trackball unlock</string>
+    <string name="pref_trackball_unlock_toggle_summary">Allow trackball to unlock the device</string>
 
 </resources>
