@@ -37,7 +37,7 @@
     <string name="pref_sweep_to_wake_title">Enable</string>
     <string name="pref_sweep_to_wake_summary">Enables sweep2wake, a method to turn the screen on by swiping from left to right on capacitive buttons and right to left to sleep</string>
 
-    <!-- tpwake -->
+    <!-- Trackball -->
     <string name="pref_trackball_wake_toggle_title">Trackball wake</string>
     <string name="pref_trackball_wake_toggle_summary">Allow trackball to wake the device</string>
     <string name="pref_trackball_unlock_toggle_title">Trackball unlock</string>

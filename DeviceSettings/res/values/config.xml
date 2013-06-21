@@ -27,10 +27,10 @@
     <string name="intensity_default_value">3000</string>
     <string name="intensity_min_value">1900</string>
 
-    <!-- sweep2wake -->
+    <!-- Sweep2wake -->
     <bool name="has_sweep2wake">true</bool>
 
-    <!-- tpwake -->
+    <!-- Trackball -->
     <bool name="has_trackball">true</bool>
 
 </resources>

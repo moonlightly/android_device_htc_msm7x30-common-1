@@ -53,7 +53,7 @@ public class TrackpadFragmentActivity extends PreferenceFragment {
         Resources res = getResources();
         sTrackball = res.getBoolean(R.bool.has_trackball);
         mCr = getActivity().getContentResolver();
-
+        
         addPreferencesFromResource(R.xml.trackball_preferences);
 
         if (sTrackball) {
@@ -66,6 +66,8 @@ public class TrackpadFragmentActivity extends PreferenceFragment {
                 Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
         }
 
+    }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         String boxValue;
@@ -76,10 +78,12 @@ public class TrackpadFragmentActivity extends PreferenceFragment {
         }
         else if (preference == mTrackballUnlockScreen) {
             Settings.System.putInt(mCr, Settings.System.TRACKBALL_UNLOCK_SCREEN, mTrackballUnlockScreen.isChecked() ? 1 : 0);
-        } else {
-            return false;
         }
-        return true;
+        else {
+     return false;
+          }
+        Log.w(TAG, "key: " + key);
+    return true;
     }
 
     public static void restore(Context context) {
