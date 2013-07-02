@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Advanced settings</string>
+    <string name="app_name">Продвинутые настройки</string>
     <string name="defaults_button">Reset to default</string>
     <string name="category_haptic_title">Haptic</string>
-    <string name="category_touchscreen_title">Touchscreen</string>
+    <string name="category_touchscreen_title">Тачскрин</string>
     <string name="category_trackpad_title">Trackpad</string>
     <string name="vibrator_title">Vibrator</string>
     <string name="vibrator_tuning_title">Vibration strength</string>
     <string name="vibrator_tuning_summary_head">Adjust the strength of the vibration feedback</string>
     <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
     <string name="pref_sweep_to_wake_category_title">Sweep2Wake</string>
-    <string name="pref_sweep_to_wake_title">Enable</string>
-    <string name="pref_sweep_to_wake_summary">Enables sweep2wake, a method to turn the screen on by swiping from left to right on capacitive buttons and right to left to sleep</string>
+    <string name="pref_sweep_to_wake_title">Включить</string>
+    <string name="pref_sweep_to_wake_summary">Включает Sweep2Wake - разблокировку и блокировку по проведению пальцем по софт клавишам.</string>
     <string name="pref_trackball_wake_toggle_title">Trackball wake</string>
     <string name="pref_trackball_wake_toggle_summary">Allow trackball to wake the device</string>
     <string name="pref_trackball_unlock_toggle_title">Trackball unlock</string>
