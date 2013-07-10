@@ -90,3 +90,14 @@ PRODUCT_PACKAGES += \
  PRODUCT_PROPERTY_OVERRIDES += \
      debug.composition.type=gpu \
      debug.sf.hw=1 \
+
+# We have enough space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Set build date
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_LOCALES += en_US
