@@ -68,7 +68,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm7x30 \
     hwcomposer.msm7x30
 
-# QCOM OMX
+# Qcom omx
 PRODUCT_PACKAGES += \
     libstagefrighthw \
     libOmxCore \
@@ -86,24 +86,7 @@ PRODUCT_PACKAGES += \
     DeviceSettings \
     com.android.future.usb.accessory
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
-
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    setup_fs
-
-# We have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
-# Use high-density artwork where available
-PRODUCT_LOCALES += en
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+# Build.prop
+ PRODUCT_PROPERTY_OVERRIDES += \
+     debug.composition.type=gpu \
+     debug.sf.hw=1 \
