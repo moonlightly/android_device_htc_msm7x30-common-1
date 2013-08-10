@@ -89,7 +89,8 @@ PRODUCT_PACKAGES += \
 # Build.prop
  PRODUCT_PROPERTY_OVERRIDES += \
      debug.composition.type=gpu \
-     debug.sf.hw=1 \
+     ro.bq.gpu_to_cpu_unsupported=1 \
+     debug.sf.hw=1
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
