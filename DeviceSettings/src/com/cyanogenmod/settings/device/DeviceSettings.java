@@ -62,8 +62,6 @@ public class DeviceSettings extends FragmentActivity {
                     HapticFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_touchscreen_title),
                     TouchscreenFragmentActivity.class, null);
-        mTabsAdapter.addTab(bar.newTab().setText(R.string.category_trackpad_title),
-                    TrackpadFragmentActivity.class, null);
 
         if (savedInstanceState != null) {
             bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));
