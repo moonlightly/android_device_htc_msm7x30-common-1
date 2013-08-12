@@ -79,7 +79,8 @@ PRODUCT_PACKAGES += \
 
 # Wireless
 PRODUCT_PACKAGES += \
-    libnetcmdiface
+    libnetcmdiface \
+    libsurfaceflinger_client
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -90,7 +91,8 @@ PRODUCT_PACKAGES += \
  PRODUCT_PROPERTY_OVERRIDES += \
      debug.composition.type=gpu \
      ro.bq.gpu_to_cpu_unsupported=1 \
-     debug.sf.hw=1
+     debug.sf.hw=1 \
+     ro.sys.fw.bg_apps_limit=12
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
