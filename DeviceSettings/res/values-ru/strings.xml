@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Продвинутые настройки</string>
-    <string name="defaults_button">Восстановить по умолчанию</string>
-    <string name="category_haptic_title">Тактильность</string>
-    <string name="category_touchscreen_title">Тачскрин</string>
+    <string name="app_name">Настройки MyTouch 4G</string>
+    <string name="defaults_button">Настройки по умолчанию</string>
+    <string name="category_haptic_title">Отклик</string>
+    <string name="category_touchscreen_title">Сенсорный экран</string>
     <string name="category_trackpad_title">Трекбол</string>
-    <string name="vibrator_title">Vibrator</string>
-    <string name="vibrator_tuning_title">Vibration strength</string>
-    <string name="vibrator_tuning_summary_head">Adjust the strength of the vibration feedback</string>
-    <string name="vibrator_warning">Значение выше чем %1$d не рекомендуется</string>
+    <string name="vibrator_title">Вибрация</string>
+    <string name="vibrator_tuning_title">Интенсивность вибрации</string>
+    <string name="vibrator_tuning_summary_head">Установка интенсивности вибрации</string>
+    <string name="vibrator_warning">Не рекомендуется установка значения выше %1$d</string>
     <string name="pref_sweep_to_wake_category_title">Sweep2Wake</string>
     <string name="pref_sweep_to_wake_title">Включить</string>
     <string name="pref_sweep_to_wake_summary">Включает Sweep2Wake - разблокировку и блокировку по проведению пальцем по софт клавишам.</string>
     <string name="pref_trackball_wake_toggle_title">Пробуждение трекболом</string>
     <string name="pref_trackball_wake_toggle_summary">Разрешить трекболу пробуждать устройство</string>
     <string name="pref_trackball_unlock_toggle_title">Разблокировка трекболом</string>
-    <string name="pref_trackball_unlock_toggle_summary">Разрешить трекболу разблокировать устройство</string>
+    <string name="pref_trackball_unlock_toggle_summary">Разрешить трекболу разблокировать устройство.</string>
 </resources>
