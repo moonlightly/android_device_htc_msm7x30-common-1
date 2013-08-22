@@ -21,6 +21,7 @@ BOARD_VENDOR := htc
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
 
 # Architecture
 TARGET_ARCH := arm
@@ -64,14 +65,12 @@ BOARD_EGL_CFG := device/htc/msm7x30-common/configs/egl.cfg
 # Camera
 BOARD_USES_QCOM_LEGACY_CAM_PARAMS := true
 CAMERA_USES_SURFACEFLINGER_CLIENT_STUB := true
-#TARGET_DISABLE_ARM_PIE := true
 BOARD_NEEDS_MEMORYHEAPPMEM := true
 COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB  -DNO_UPDATE_PREVIEW
 
 # Audio
 TARGET_QCOM_AUDIO_VARIANT := caf
 BOARD_HAVE_HTC_AUDIO := true
-BOARD_USES_LEGACY_ALSA_AUDIO := true
 
 # Wifi
 WIFI_BAND := 802_11_ABGN
@@ -114,7 +113,7 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Usb
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
 
 # Webkit
 TARGET_FORCE_CPU_UPLOAD := true
