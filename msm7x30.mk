@@ -71,6 +71,7 @@ PRODUCT_PACKAGES += \
 # Qcom omx
 PRODUCT_PACKAGES += \
     libstagefrighthw \
+    libc2dcolorconvert \
     libOmxCore \
     libmm-omxcore \
     libdivxdrmdecrypt \
