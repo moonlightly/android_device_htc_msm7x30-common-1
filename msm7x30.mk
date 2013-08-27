@@ -80,7 +80,10 @@ PRODUCT_PACKAGES += \
 
 # Wireless
 PRODUCT_PACKAGES += \
-    libnetcmdiface \
+    libnetcmdiface
+
+# Camera
+PRODUCT_PACKAGES += \
     libsurfaceflinger_client
 
 # Misc
