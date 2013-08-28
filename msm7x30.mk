@@ -60,13 +60,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm7x30 \
-    libaudioutils
+    libaudioutils \
+    audio.usb.default \
+    libtinyalsa
 
 # Video
 PRODUCT_PACKAGES += \
     copybit.msm7x30 \
     gralloc.msm7x30 \
-    hwcomposer.msm7x30
+    hwcomposer.msm7x30 \
+    libtilerenderer \
+    libgenlock \
+    libmemalloc \
+    liboverlay \
+    libQcomUI \
 
 # Qcom omx
 PRODUCT_PACKAGES += \
