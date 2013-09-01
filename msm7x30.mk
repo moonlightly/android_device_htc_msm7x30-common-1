@@ -103,7 +103,8 @@ PRODUCT_PACKAGES += \
      debug.composition.type=gpu \
      ro.bq.gpu_to_cpu_unsupported=1 \
      debug.sf.hw=1 \
-     ro.sys.fw.bg_apps_limit=12
+     ro.sys.fw.bg_apps_limit=12 \
+     dalvik.vm.debug.alloc=0
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
