@@ -58,6 +58,7 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 BOARD_EGL_CFG := device/htc/msm7x30-common/configs/egl.cfg
 
 # Video
+TARGET_QCOM_MEDIA_VARIANT := legacy
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Camera
