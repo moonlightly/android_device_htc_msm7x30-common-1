@@ -30,8 +30,8 @@
 #define BOOSTPULSE_ONDEMAND "/sys/devices/system/cpu/cpufreq/ondemand/boostpulse"
 #define BOOSTPULSE_INTERACTIVE "/sys/devices/system/cpu/cpufreq/interactive/boostpulse"
 #define SAMPLING_RATE_ONDEMAND "/sys/devices/system/cpu/cpufreq/ondemand/sampling_rate"
-#define SAMPLING_RATE_SCREEN_ON "50000"
-#define SAMPLING_RATE_SCREEN_OFF "500000"
+#define SAMPLING_RATE_SCREEN_ON "500000"
+#define SAMPLING_RATE_SCREEN_OFF "50000"
 
 struct cm_power_module {
     struct power_module base;
@@ -221,4 +221,3 @@ struct cm_power_module HAL_MODULE_INFO_SYM = {
     boostpulse_fd: -1,
     boostpulse_warned: 0,
 };
-
