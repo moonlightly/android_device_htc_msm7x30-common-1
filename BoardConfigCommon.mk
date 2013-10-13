@@ -121,3 +121,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_stora
 # Webkit
 TARGET_FORCE_CPU_UPLOAD := true
 ENABLE_WEBGL := true
+
+# Hardware tunables
+BOARD_HARDWARE_CLASS := device/htc/msm7x30-common/cmhw
