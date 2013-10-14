@@ -89,6 +89,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface
 
+# Gps
+PRODUCT_PACKAGES += \
+    gps.glacier \
+    librpc
+
 # Camera
 PRODUCT_PACKAGES += \
     libsurfaceflinger_client
