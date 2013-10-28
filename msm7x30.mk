@@ -91,8 +91,7 @@ PRODUCT_PACKAGES += \
 
 # Gps
 PRODUCT_PACKAGES += \
-    gps.glacier \
-    librpc
+    gps.glacier
 
 # Camera
 PRODUCT_PACKAGES += \
