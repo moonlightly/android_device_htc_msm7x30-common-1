@@ -22,14 +22,12 @@ BOARD_VENDOR := htc
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := scorpion
+TARGET_CPU_VARIANT := cortex-a8
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 ARCH_ARM_HAVE_VFP := true
 ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
-
-TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Kernel
 BUILD_KERNEL := true
@@ -118,10 +116,6 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 # Usb
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
-
-# Webkit
-TARGET_FORCE_CPU_UPLOAD := true
-ENABLE_WEBGL := true
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/htc/msm7x30-common/cmhw

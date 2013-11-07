@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    DeviceSettings \
+#    DeviceSettings \
     com.android.future.usb.accessory
 
 # Build.prop
