@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+COMMON_PATH := device/htc/msm7x30-common
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -35,20 +36,17 @@ PRODUCT_COPY_FILES += \
 
 # Common 7x30 firmware
 PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/firmware/vidc_720p_command_control.fw:system/etc/firmware/vidc_720p_command_control.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_h263_dec_mc.fw:system/etc/firmware/vidc_720p_h263_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_h264_dec_mc.fw:system/etc/firmware/vidc_720p_h264_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_h264_enc_mc.fw:system/etc/firmware/vidc_720p_h264_enc_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_mp4_dec_mc.fw:system/etc/firmware/vidc_720p_mp4_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_mp4_enc_mc.fw:system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_vc1_dec_mc.fw:system/etc/firmware/vidc_720p_vc1_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    device/htc/msm7x30-common/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
-    device/htc/msm7x30-common/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
-    device/htc/msm7x30-common/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
-
-# Wifi firmware
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+    $(COMMON_PATH)/firmware/vidc_720p_command_control.fw:system/etc/firmware/vidc_720p_command_control.fw \
+    $(COMMON_PATH)/firmware/vidc_720p_h263_dec_mc.fw:system/etc/firmware/vidc_720p_h263_dec_mc.fw \
+    $(COMMON_PATH)/firmware/vidc_720p_h264_dec_mc.fw:system/etc/firmware/vidc_720p_h264_dec_mc.fw \
+    $(COMMON_PATH)/firmware/vidc_720p_h264_enc_mc.fw:system/etc/firmware/vidc_720p_h264_enc_mc.fw \
+    $(COMMON_PATH)/firmware/vidc_720p_mp4_dec_mc.fw:system/etc/firmware/vidc_720p_mp4_dec_mc.fw \
+    $(COMMON_PATH)/firmware/vidc_720p_mp4_enc_mc.fw:system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
+    $(COMMON_PATH)/firmware/vidc_720p_vc1_dec_mc.fw:system/etc/firmware/vidc_720p_vc1_dec_mc.fw \
+    $(COMMON_PATH)/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
+    $(COMMON_PATH)/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
+    $(COMMON_PATH)/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
+    $(COMMON_PATH)/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
 
 # Device-Specific HALs
 PRODUCT_PACKAGES += \
@@ -110,6 +108,9 @@ PRODUCT_PACKAGES += \
      ro.sys.fw.bg_apps_limit=10 \
      ro.config.low_ram=true \
      dalvik.vm.jit.codecachesize=0
+
+# Wifi firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
