@@ -94,19 +94,18 @@ BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+BOARD_EGL_WORKAROUND_BUG_10194508 := true 
+
 # Gps
 BOARD_USES_QCOM_GPS := true
 TARGET_PROVIDES_GPS_LOC_API := true
 TARGET_QCOM_GPS_VARIANT := legacy
 BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
 
-
 # Ril
 BOARD_USE_NEW_LIBRIL_HTC := true
 BOARD_USES_LEGACY_RIL := true
-
-# Dalvik
-TARGET_ARCH_LOWMEM := true
 
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -115,7 +114,7 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Usb
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/htc/msm7x30-common/cmhw
