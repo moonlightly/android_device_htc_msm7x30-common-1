@@ -22,12 +22,17 @@ BOARD_VENDOR := htc
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := cortex-a8
+TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 ARCH_ARM_HAVE_VFP := true
 ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
+
+# Flags
+TARGET_EXTRA_CFLAGS += $(call cc-option,-march=armv7-a -mtune=cortex-a8)
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Kernel
 BUILD_KERNEL := true
@@ -82,7 +87,7 @@ WIFI_DRIVER_FW_PATH_STA := "/system/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP := "/system/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P := "/system/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_MODULE_NAME := bcmdhd
+WIFI_DRIVER_MODULE_NAME := "bcmdhd"
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/bcmdhd.ko"
 BOARD_LEGACY_NL80211_STA_EVENTS := true
 
@@ -113,7 +118,12 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Usb
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+# TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 
 # Hardware tunables
 BOARD_HARDWARE_CLASS := device/htc/msm7x30-common/cmhw
+
+# Webkit
+TARGET_FORCE_CPU_UPLOAD := true
+ENABLE_WEBGL := true
