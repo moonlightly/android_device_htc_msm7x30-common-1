@@ -52,12 +52,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm7x30 \
     sensors.msm7x30 \
-    power.msm7x30
+    power.msm7x30 \
 
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm7x30 \
+    audio_policy.msm7x30 \
     libaudioutils \
     audio.usb.default \
     libtinyalsa
@@ -100,14 +101,27 @@ PRODUCT_PACKAGES += \
 #    DeviceSettings \
     com.android.future.usb.accessory
 
-# Build.prop
- PRODUCT_PROPERTY_OVERRIDES += \
-     debug.composition.type=gpu \
-     ro.bq.gpu_to_cpu_unsupported=1 \
-     debug.sf.hw=1 \
-     ro.sys.fw.bg_apps_limit=10 \
-     ro.config.low_ram=true \
-     dalvik.vm.jit.codecachesize=0
+# Common build.prop overrides
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.locationfeatures=1 \
+    ro.com.google.networklocation=1 \
+    ro.com.google.gmsversion=4.0_r1 \
+    ro.setupwizard.enable_bypass=1 \
+    dalvik.vm.lockprof.threshold=500 \
+    dalvik.vm.dexopt-flags=m=y \
+    ro.bq.gpu_to_cpu_unsupported=1 \
+    ro.config.low_ram=true \
+    persist.sys.usb.config=mass_storage,adb
+
+# Msm7x30 specific overrides
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.bg_apps_limit=12 \
+    com.qc.hardware=true \
+    debug.egl.hw=1 \
+    debug.sf.hw=1 \
+    debug.mdpcomp.logs=0 \
+    dev.pm.dyn_samplingrate=1 \
+    ro.opengles.version=131072
 
 # Wifi firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
