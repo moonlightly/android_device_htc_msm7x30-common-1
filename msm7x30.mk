@@ -52,7 +52,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm7x30 \
     sensors.msm7x30 \
-    power.msm7x30 \
+    power.msm7x30
 
 # Audio
 PRODUCT_PACKAGES += \
